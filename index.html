@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbiB - Web Mapping Service</title>
+    <link rel="stylesheet" href="ol.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div id="grid-container">
+        <div id="grid1">
+            <!-- <h3>Base Layers</h3> -->
+            <!-- <input type="radio" name="baseLayerRadioButton" value="Swisstopo"checked>Swisstopo Landeskarte<br>
+            <input type="radio" name="baseLayerRadioButton" value="OSMLayer" >OSM Base Layer<br> -->
+            <p><h2>EbiB Web Map Service</h2></p>
+            <!-- <details id="schweizweit">  
+            <summary>Schweizweite Layer (Swisstopo)</summary> -->
+            <input type="checkbox" name="overlayLayerCheckbox" value="Swisstopo">Landeskarte<br>
+            <!-- <input type="checkbox" name="overlayLayerCheckbox" value="Kantonsgrenzen">Kantonsgrenzen<br>
+            <input type="checkbox" name="overlayLayerCheckbox" value="Gemeinden">Gemeinden<br>
+            <input type="checkbox" name="overlayLayerCheckbox" value="Parzellen">Parzellen<br>
+            <input type="checkbox" name="overlayLayerCheckbox" value="GWR">Gebäuderegister<p> -->
+            <!-- </details> <br> -->
+
+
+            <h3>Interne Layer</h3>
+            <input type="checkbox" name="overlayLayerCheckbox" value="geoJSONEbiA">Projekte EbiA<br>
+            <input type="checkbox" name="overlayLayerCheckbox" value="geoJSONEbiB">Projekte EbiB<br>
+            <input type="checkbox" name="overlayLayerCheckbox" value="Zonen">Gemeinden<br>
+            <input type="checkbox" name="overlayLayerCheckbox" value="BTV">BTV-Grenze<br>
+
+
+            <!-- <details id="zh"> -->
+            <!-- <summary>Layer Kanton ZH</summary> -->
+            <!-- <input type="checkbox" name="overlayLayerCheckbox" value="DenkmalschutzZH">Denkmalschutzobjekte<br><p> -->
+            <!-- </details><br> -->
+
+            <!-- <details id="bs">
+            <summary>Layer Kanton BS</summary> -->
+            <!-- <input type="checkbox" name="overlayLayerCheckbox" value="BohrungenBL">Bohrungen Kt. BS<br><p>
+            </details><br> -->
+
+            <!-- <details id="so">
+            <summary>Layer Kanton SO</summary>
+            <input type="checkbox" name="overlayLayerCheckbox" value="BohrungenSO">Bohrungen Kt. SO<br><p>
+            </details><br> -->
+        </div>
+        <div id="grid2">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div id="popup" class="ol-popup" style="font-family: Arial, Helvetica, sans-serif; font-size: small;">
+        <span id="p-number"></span>
+        <span id="p-name"></span>
+        <span id="p-kunde"></span>
+        <span id="p-status"></span>
+        <span id="p-gemeinde"></span>
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js"></script>
+<script src="lib/jszip.js"></script>
+<script src="lib/jszip-utils.js"></script>
+<script type="text/javascript" src="lib/jszip-utils-ie.js"></script>
+<script src="preprocess.js"></script>
+<script src="preview.js"></script> -->
+    <script src="proj4js/dist/proj4.js"></script>
+    <script src="proj4js/dist/proj4-src.js"></script>
+    <script src="dist/ol.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
